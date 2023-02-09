@@ -1,7 +1,12 @@
-<script setup >
+<script setup>
+import { onMounted, ref } from 'vue'
+console.log('INIT PAGE ')
 definePageMeta({})
 useHead({
   title: 'Nuxt3 Eslint',
+})
+onMounted(() => {
+  console.log('MOUNTED PAGE ')
 })
 </script>
 
@@ -14,18 +19,12 @@ useHead({
 
 <style lang="postcss" scoped>
 .wrapper {
-  @apply w-full flex;
+  @apply flex w-full;
   .port {
-    @apply md:w-1/2 w-full;
+    @apply w-full md:w-1/2;
   }
   .form {
-    @apply md:w-1/2 w-full;
+    @apply w-full md:w-1/2;
   }
 }
 </style>
-
-
-
-
-
-
